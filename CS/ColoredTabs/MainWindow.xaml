@@ -1,0 +1,62 @@
+﻿<Window x:Class="ColoredTabs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        dx:ThemeManager.ThemeName="DXStyle"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <dxd:DockLayoutManager>
+            <dxd:DockLayoutManager.Resources>
+                <Style x:Key="PanelText" TargetType="TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                    <Setter Property="FontSize" Value="14" />
+                    <Setter Property="TextWrapping" Value="Wrap" />
+                    <Setter Property="TextAlignment" Value="Center" />
+                    <Setter Property="Margin" Value="8,8,8,12" />
+                </Style>
+                <DataTemplate x:Key="ContentTemplate">
+                    <TextBlock Style="{StaticResource PanelText}" Text="{Binding}"/>
+                </DataTemplate>
+            </dxd:DockLayoutManager.Resources>
+            <dxd:LayoutGroup>
+                <dxd:DocumentGroup>
+                    <dxd:DocumentGroup.Resources>
+                        <Style TargetType="{x:Type dxd:DocumentPanel}">
+                            <Setter Property="Content" Value="These panels use the TabBackgroundColor property to customize the header background" />
+                            <Setter Property="ContentTemplate" Value="{StaticResource ContentTemplate}"/>
+                        </Style>
+                    </dxd:DocumentGroup.Resources>
+                    <dxd:DocumentPanel Caption="Red" TabBackgroundColor="Red" />
+                    <dxd:DocumentPanel Caption="Green" TabBackgroundColor="Green" />
+                    <dxd:DocumentPanel Caption="Blue" TabBackgroundColor="Blue"/>
+                </dxd:DocumentGroup>
+                <dxd:DocumentGroup>
+                    <dxd:DocumentGroup.Resources>
+                        <Style TargetType="dxd:DocumentPanel">
+                            <Setter Property="Appearance">
+                                <Setter.Value>
+                                    <dxd:Appearance>
+                                        <dxd:Appearance.Normal>
+                                            <dxd:AppearanceObject TabBackgroundColor="Green" />
+                                        </dxd:Appearance.Normal>
+                                        <dxd:Appearance.Active>
+                                            <dxd:AppearanceObject TabBackgroundColor="Red" />
+                                        </dxd:Appearance.Active>
+                                    </dxd:Appearance>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Content" Value="These panels use the Appearance object to customize the header background">
+                            </Setter>
+                            <Setter Property="ContentTemplate" Value="{StaticResource ContentTemplate}"/>
+                        </Style>
+                    </dxd:DocumentGroup.Resources>
+                    <dxd:DocumentPanel Caption="Panel1" />
+                    <dxd:DocumentPanel Caption="Panel2" />
+                    <dxd:DocumentPanel Caption="Panel3" />
+                </dxd:DocumentGroup>
+            </dxd:LayoutGroup>
+        </dxd:DockLayoutManager>
+    </Grid>
+</Window>
