@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredTabs", "ColoredTabs\ColoredTabs.csproj", "{8CCE6988-B065-4E54-8E77-734530497F0F}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredTabs", "ColoredTabs\ColoredTabs.Net5.csproj", "{8CCE6988-B065-4E54-8E77-734530497F0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
