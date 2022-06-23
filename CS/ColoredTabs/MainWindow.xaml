@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-        dx:ThemeManager.ThemeName="DXStyle"
+        dx:ThemeManager.ThemeName="Office2019Colorful"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <dxd:DockLayoutManager>
