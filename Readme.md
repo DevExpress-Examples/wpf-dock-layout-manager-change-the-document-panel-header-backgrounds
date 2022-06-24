@@ -4,7 +4,8 @@
 <!-- default badges end -->
 # WPF Dock Layout Manager - Change the DocumentPanel Header Backgrounds
 
-This changes the [DocumentPanel](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DocumentPanel) header background.
+This example changes the [DocumentPanel](https://docs.devexpress.com/WPF/DevExpress.Xpf.Docking.DocumentPanel) header background.
+
   
 <img src="https://user-images.githubusercontent.com/12169834/175339453-abef15bb-a3b6-4cdc-8771-744644756355.png" width=600px/>
 
